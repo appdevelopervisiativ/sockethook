@@ -1,4 +1,4 @@
-module github.com/corollari/sockethook
+module github.com/appdevelopervisiativ/sockethook
 
 go 1.12
 
