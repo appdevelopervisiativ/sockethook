@@ -13,7 +13,10 @@ import (
 
 // Map holding all Websocket clients and the endpoints they are subscribed to
 var clients = make(map[string][]*websocket.Conn)
-var upgrader = websocket.Upgrader{}
+var upgrader = websocket.Upgrader{
+	ReadBufferSize:  256,
+	WriteBufferSize: 256,
+}
 
 // Message which will be sent as JSON to Websocket clients
 type Message struct {
